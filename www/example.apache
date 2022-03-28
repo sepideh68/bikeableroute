@@ -1,0 +1,46 @@
+CACHE MANIFEST
+CACHE:
+lib/ionic/css/ionic.css
+css/leaflet.css
+css/MarkerCluster.css
+css/MarkerCluster.BikeRoute.css
+css/style.css
+css/angular-chart.css 
+css/jquery.mobile-1.4.5.min.css  
+css/font-awesome.min.css
+lib/leaflet/leaflet.js
+css/modals.css" rel="stylesheet">
+css/range.css  
+lib/ionic/js/ionic.bundle.js
+lib/ionic/js/angular/angular.min.js
+js/Leaflet.MakiMarkers.js
+js/leaflet.markercluster.js
+lib/leaflet/angular-leaflet-directive.min.js
+js/angular-simple-logger.js
+js/ui-leaflet.min.js
+js/jquery.min.js
+lib/ngStorage.min.js
+lib/ng-cordova.min.js
+cordova.js
+js/app.js
+js/controllers/mapController.js
+js/services/locationsService.js
+js/Chart.js
+js/Chart.min.js
+js/angular-chart.min.js
+js/services/menuServices.js
+js/services/instructionsService.js
+js/directives/igTruncate.js
+js/services/imageSlidesService.js  
+js/services/google_login.js
+js/services/GapiRiskFactorService.js
+js/services/webdb.js
+
+# Use from network if available
+NETWORK:
+http://tombatossals.github.io/angular-leaflet-directive/bower_components/Leaflet.MakiMarkers/Leaflet.MakiMarkers.js
+http://tombatossals.github.io/angular-leaflet-directive/bower_components/Leaflet.heat/dist/leaflet-heat.js
+http://tombatossals.github.io/angular-leaflet-directive/bower_components/font-awesome/css/font-awesome.min.css
+http://tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js
+http://tombatossals.github.io/angular-leaflet-directive/bower_components/leaflet/dist/leaflet.js
+

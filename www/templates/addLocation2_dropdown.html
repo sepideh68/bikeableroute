@@ -1,0 +1,191 @@
+<ion-modal-view>
+  <ion-header-bar align-title="center" class="bar-dark">
+
+   <h4 class="title" >BikeableRoute</h4>
+
+    <div class="buttons">
+      <button class="button button-small button-clear button-ligth" ng-click="modal.hide()">Cancel</button>
+       
+    </div>
+    <div class="buttons" >     		
+     <button class="button button-small button-clear button-ligth"   ng-disabled="locationForm.$invalid" 
+     		ng-click="report()">Report</button>
+    </div>
+
+  </ion-header-bar>
+
+  <ion-content >  
+<!--   <ion-tabs class="tabs-dark tabs-icon-top"">
+			<ion-tab title="Infrastructure-related" icon="fa fa-road" >  
+     <ion-slide-box show-pager="false" does-continue="false" on-slide-changed="slideHasChanged($index)">
+			        <ion-slide ng-repeat="(key, imgSrc) in imageSlides track by imgSrc.src">
+			        <select name="repeatSelect" id="repeatSelect" ng-model="SelectedReportItem" 
+			    ng-options="imgSrc.title for imgSrc in imageSlides track by imgSrc.src">
+			    </select>
+						 <div class="item" Style="text-align:center" >
+						  <h2 class="item-h3">{{imgSrc.title}}</h2>
+			      		  <img ng-src="{{imgSrc.src}}" alt="{{imgSrc.title}}">
+			       		  <div class="list">
+						  <div class="item range range-positive">
+						  <i class="icon ion-ios-minus-outline"></i>
+						  <input  type="range" name="volume" min="1" max="5" ng-change="rangeChange(imgSrc);" ng-model="imgSrc.value">
+						  <p>{{imgSrc.value}}</p>						  
+						  <i class="icon ion-ios-plus"></i>
+				     	  </div>
+			      		  
+			      		  </div>
+			      		  
+					</div>
+			      	</ion-slide>	
+				</ion-slide-box>
+				</ion-tab>
+				</ion-tabs> -->
+	  
+	<ion-tabs class="tabs-dark tabs-icon-top"">
+		<ion-tab title="Infrastructure-related" icon="fa fa-road" >
+		<label >Select the risks you see on the road<br><br></label>
+  		<select name="repeatSelect" id="repeatSelect" ng-model="SelectedReportItem" 
+						    ng-options="imgSrc.title for imgSrc in imageSlides track by imgSrc.src"						    
+						    >
+		</select>
+			<ion-slide-box show-pager="false" does-continue="false" on-slide-changed="slideHasChanged($index)"
+			>
+				<ion-slide ng-repeat="(key, SelectedReportItem) in imageSlides track by SelectedReportItem.src" 				
+				>
+					<div Style="text-align:center">
+					<form name="myForm">
+						
+						
+					</form>
+					<hr>
+					
+					<tt >{{SelectedReportItem.title}}</tt><br/>
+					<img ng-src="{{SelectedReportItem.src}}" alt="{{SelectedReportItem.title}}"><br>
+					<div class="item range">
+						<i class="icon ion-ios-minus-outline"></i>
+						<input type="range" name="volume" min="1" max="5" ng-change="rangeChange(SelectedReportItem);" ng-model="SelectedReportItem.value">
+						<p>{{SelectedReportItem.value}}</p>
+						<i class="icon ion-ios-plus"></i>
+					</div>
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+		</ion-tab>
+	</ion-tabs>
+<!--
+<ion-tab title="Traffic-related" icon="fa fa-car">
+<div Style="text-align:center">
+<form name="myForm">
+<label >Select the risks you see on the road<br></label>
+<select name="repeatSelect" id="repeatSelect" ng-model="SelectedReportItem2" 
+ng-options="imgSrc.title for imgSrc in imageSlides2 track by imgSrc.src">
+
+</select>
+</form>
+<hr>
+<tt >{{SelectedReportItem2.title}}</tt><br/>
+
+<img ng-src="{{SelectedReportItem2.src}}" alt="{{SelectedReportItem2.title}}"><br>
+  
+<div class="item range">
+<i class="icon ion-ios-minus-outline"></i>
+<input type="range" name="volume" min="1" max="5" ng-change="rangeChange(SelectedReportItem2);" ng-model="SelectedReportItem2.value">
+<p>{{SelectedReportItem2.value}}</p>
+<i class="icon ion-ios-plus"></i>
+</div>
+</div>	
+		
+</ion-tab>
+c
+<div Style="text-align:center">
+<form name="myForm">
+<label >Select the risks you see on the road<br></label>
+<select name="repeatSelect" id="repeatSelect" ng-model="SelectedReportItem3" 
+ng-options="imgSrc.title for imgSrc in imageSlides3 track by imgSrc.src">
+</select>
+</form>
+<hr>
+<tt >{{SelectedReportItem3.title}}</tt><br/>
+  
+<img ng-src="{{SelectedReportItem3.src}}" alt="{{SelectedReportItem3.title}}"><br>
+  
+<div class="item range">
+<i class="icon ion-ios-minus-outline"></i>
+<input type="range" name="volume" min="1" max="5" ng-change="rangeChange(SelectedReportItem3);" ng-model="SelectedReportItem3.value">
+<p>{{SelectedReportItem3.value}}</p>
+<i class="icon ion-ios-plus"></i>
+</div>
+</div>	
+
+	
+</ion-tab>
+
+</ion-tabs> -->
+
+    <div class="padding">
+    </div>
+
+</ion-content>
+//////////////
+
+	<ion-content >
+	<ion-tabs class="tabs-dark tabs-icon-top"">
+			<ion-tab title="Infrastructure-related" icon="fa fa-road" >
+			<ion-slide-box show-pager="false" does-continue="false" on-slide-changed="slideHasChanged($index)">
+				<ion-slide >
+		<div class="row" ng-repeat="(key, imgSrc) in imageSlides track by imgSrc.src" ng-if="$index % 4 === 0">
+	        <div class="col col-25" ng-if="$index < imageSlides.length">
+	          <a >  <img ng-src="{{imageSlides[$index].src}}" width="100%" /></a>
+	        </div>
+	        <div class="col col-25" ng-if="$index + 1 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 1].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 2 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 2].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 3 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 3].src}}" width="100%" />
+	        </div>
+	        </div>
+	        <div class="row" >
+	        <div class="col col-25" ng-if="$index + 4 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 4].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 5 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 5].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 6 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 6].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 7 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 7].src}}" width="100%" />
+	        </div>
+	        </div>
+	        <div class="row">
+	             <div class="col col-25" ng-if="$index + 8 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 8].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 9 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 9].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 10 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 10].src}}" width="100%" />
+	        </div>
+	        <div class="col col-25" ng-if="$index + 11 < imageSlides.length">
+	            <img ng-src="{{imageSlides[$index + 11].src}}" width="100%" />
+	        </div>
+		</div>
+		</ion-slide>
+		
+		</ion-tab>
+		<ion-tab title="Traffic-related" icon="fa fa-car">
+		</ion-tab>
+		<ion-tab title="Facility-related" icon="fa fa-exclamation-triangle">
+		</ion-tab>
+		</ion-slide-box>
+		</ion-tabs>
+	</ion-content>
+<!--     <ion-delete-button class="ion-minus-circled"
+                       ng-click="items.splice($index, 1)">
+    </ion-delete-button> -->
+</ion-modal-view>

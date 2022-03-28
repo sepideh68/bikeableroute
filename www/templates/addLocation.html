@@ -1,0 +1,46 @@
+<ion-modal-view>
+<ion-header-bar align-title="center" class="bar-dark">
+	<h4 class="title" >BikeableRoute</h4>
+	<div class="buttons">
+		<button class="button button-small button-clear button-ligth" ng-click="closeModal1()">Cancel</button>   
+	</div>
+</ion-header-bar>
+	
+<ion-tabs class="tabs-dark tabs-icon-top">
+	<ion-tab title="Infrastructure-related" icon="fa fa-road" >
+		<ion-content >
+			<ion-list>
+				<ion-item ng-repeat="(key, imgSrc) in imageSlides track by imgSrc.src" ng-click="showImages($index)" class="item-thumbnail-left">
+				
+					<img ng-src="{{imgSrc.src}}" >
+					<a style ="overflow: initial; white-space:initial;font-size:19px; vertical-align:-25px; line-height:0;">{{imgSrc.title}}</a>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-tab>
+ 	<ion-tab title="Traffic-related" icon="fa fa-car">
+		<ion-content>
+			<ion-list>
+				<ion-item ng-repeat="(key, imgSrc) in imageSlides2 track by imgSrc.src" ng-click="showImages2($index)"
+				            class="item-thumbnail-left">
+				
+					<img ng-src="{{ imgSrc.src}}"  >
+					<a style ="overflow: initial; white-space:initial;font-size:19px;vertical-align:-25px; line-height:0;">{{imgSrc.title}}</a>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-tab>
+	<ion-tab title="Facility-related" icon="fa fa-exclamation-triangle">
+		<ion-content>
+			<ion-list>
+				<ion-item ng-repeat="(key, imgSrc) in imageSlides3 track by imgSrc.src"  ng-click="showImages3($index)" 
+				            class="item-thumbnail-left">
+				
+					<img ng-src="{{ imgSrc.src}}">
+					<a style ="overflow: initial; white-space:initial;font-size:19px;vertical-align:-25px; line-height:0;">{{imgSrc.title}}</a>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-tab>
+</ion-tabs>	
+</ion-modal-view>

@@ -1,0 +1,39 @@
+  <ion-side-menus enable-menu-with-back-views="true">
+
+  <ion-pane ion-side-menu-content>
+	 
+    <ion-nav-bar class="bar-dark">
+    </ion-nav-bar>
+     <ion-nav-view name="menuContent" animation="slide-right-left"></ion-nav-view> 
+  </ion-pane>
+
+	<ion-side-menu side="right" menu-toggle="right" >
+		<header class="bar bar-header bar-dark">
+	    <h1 class="title">{{MenuTitle}}</h1>
+	    </header>
+			<ion-content class="has-header">
+				<ion-list>
+				<ion-item nav-clear menu-close ng-click='call()'  href="#/app/search">Tracking history</ion-item>				
+					<ul >
+					<li class="item item-toggle" menu-close>
+					Enable Path
+					<label class="toggle">
+					<input type="checkbox" ng-model="checkBoxState" ng-click="isChecked()">
+					<div class="track">
+					<div class="handle"></div>
+					</div>
+					</label>
+					</li>
+					</ul>
+					<ion-item nav-clear menu-close ng-click=''  href="#/app/feedback">Feedback</ion-item>
+			<ion-item nav-clear ng-click='' menu-close href="#/app/help">Help</ion-item>
+			<ion-item nav-clear ng-click='' menu-close href="#/app/disclaim">About us</ion-item>
+			<!-- <ion-item nav-clear ng-click='' menu-close href="#/app/readfile">About us</ion-item> -->
+<!-- 			<ion-item nav-clear ng-click='' menu-close href="#/app/feedback2">view table (temp)</ion-item>
+ -->			
+			
+			</ion-list> 
+			</ion-content>
+	</ion-side-menu>		
+</ion-side-menus>
+  

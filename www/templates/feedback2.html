@@ -1,0 +1,43 @@
+<ion-view title="table view">
+	  <ion-nav-buttons side="left">
+	    <a class="button button-clear icon ion-ios-arrow-back" href="#/app/map"> </a>
+	  </ion-nav-buttons>
+	<ion-header-bar class="bar-dark">
+	      <h1 class="title">t view</h1>
+	    </ion-header-bar>
+	    
+	
+	    <ion-content>
+	    
+	    	<button class="button button-stable" ng-click="showTableTrack()">load</button>
+	    	<button class="button button-stable" ng-click="clearTable()">Clear</button>
+	    	<ion-scroll direction="xy" style="width: 500px; height: 500px">
+	    	 
+	  <table border="1">
+	  <th>
+	  <td>TrackId</td><td>PointId</td><td>Name</td><td>Date</td><td>Lat</td><td>Lng</td><td>Alt</td>
+	  <td>Accel_x</td><td>Accel_y</td><td>Accel_z</td><td>Place_id</td><td>Highway</td>
+	  <td>Gyro_x</td><td>Gyro_y</td><td>Gyro_z</td><td>deleted</td>
+	  </th>
+		  <tr ng-repeat="row in mytable | orderBy: 'DateTime' as filtered_result">
+		    <td>{{ row.TrackId }}</td>
+		    <td>{{ row.PointId }}</td>
+		    <td>{{ row.Name }}</td>
+		    <td>{{ row.DateTime }}</td>
+		    <td>{{ row.Lat }}</td>
+		    <td>{{ row.Lng }}</td>
+		    <td>{{ row.Alt }}</td>
+		    <td>{{ row.Accel_x }}</td>
+		    <td>{{ row.Accel_y }}</td>
+		    <td>{{ row.Accel_z }}</td>
+		    <td>{{ row.Place_id }}</td>
+		    <td>{{ row.Highway }}</td>
+		    <td>{{ row.Gyro_x }}</td>
+		    <td>{{ row.Gyro_y }}</td>
+		    <td>{{ row.Gyro_z }}</td>
+		    <td>{{ row.deleted }}</td>
+		  </tr>
+	  </table>  
+	   </ion-scroll>
+	</ion-content>
+</ion-view>

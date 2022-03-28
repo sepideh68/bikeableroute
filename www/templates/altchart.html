@@ -1,0 +1,15 @@
+ <ion-bottom-sheet-view>
+         <ion-header-bar align-title="left">
+            <h1 class="title ion-arrow-graph-up-right" > Elevation</h1>
+            <button class="button button-icon icon ion-ios-close-empty" ng-click="modal2.hide()"></button>
+          </ion-header-bar>
+     <ion-content class="padding">
+        <div style="width:100%; padding:4px">
+		<canvas id="line" class="chart chart-line" data="data" labels="labels"
+		 series="series" options="{showTooltips: true,  bezierCurve : true,pointDot : false, }"></canvas>
+		  <div class="chart-legend">
+		  <ul><li>Points / Elevation(m)</li></ul></div>
+		  </div> 
+	        </ion-content>
+</ion-bottom-sheet-view>
+

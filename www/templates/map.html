@@ -1,0 +1,32 @@
+<ion-view  title="BikeableRoute">
+	<ion-nav-buttons side="right">
+		<button menu-toggle="right" id="btnshowSettings"  class="button button-icon icon ion-navicon" ng-click="toggleRight()"></button>
+	</ion-nav-buttons>
+
+	<ion-nav-buttons side="left">
+		<button ng-click="locateMe();" class="button button-icon icon ion-disc"></button>
+	</ion-nav-buttons>
+<ion-header-bar class="bar-dark" align-title="center">
+      <h1 >BikeableRoute</h1>
+    </ion-header-bar>
+	<ion-content data-tap-disabled="true">
+		<leaflet defaults="map.defaults" center="map.center" markers="risksReportMarkers" watch-markers="true" paths="recordedPaths" layers="riskLayers"  ng-if="map"></leaflet>
+		<!-- <leaflet defaults="map.defaults" center="map.center" markers="markers" watch-markers="true" paths="recordedPaths" layers="riskLayers"  ng-if="map"></leaflet> -->
+	</ion-content>
+
+<!-- 	<div>
+		<button class="button icon icon-center round-button"  style="float:right;position: absolute;
+		right: 5px; top:350px; " ng-class="!started ? 'ion-record button-assertive' : 'ion-stop  button-assertive'" 
+		title="Start Tracking" ng-click="start()">
+		</button> 
+</div> -->
+<!-- 	<ion-footer-bar > -->
+	<div class="bar bar-footer bar-light" align="center">
+	<button class="button button-icon icon ion-location" ng-click="modal5.show()"></button>
+	<div class="buttons1"  ng-class="isActive? 'active1': 'active2'" ng-click="activeButton(); start()">
+		<i id="items" ng-class="isActive? 'ion-play' : 'ion-stop'"></i><span>{{btnText}}</span></div>
+	<div class="buttons2" ng-click="offlineReport()">
+		<i id="items2" class="ion-flag" ></i><span>Report Hazards</span></div>
+	 </div>
+	<!-- 	</ion-footer-bar> -->
+</ion-view>

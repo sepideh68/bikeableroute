@@ -1,0 +1,48 @@
+<div class="modal image-modal"  Style="text-align:center; ">
+   <div class="bar bar-header bar-dark">
+  <h1 class="title">Risks on the road</h1>
+  	    <button class="button button-clear button-ligth"  ng-click="report()">Report</button>
+		<button class="button button-clear button-ligth" ng-click="closeModal()">Cancel</button>
+</div><br>
+
+    <ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false" active-slide="activeSlide">
+        <ion-slide ng-repeat="(key, imgSrc) in imageSlides2 track by imgSrc.src">
+	        <br>
+	        <br>
+	        <h3>{{imgSrc.title}}</h3>
+	        <h4></h4>
+	        <br>
+	            <img ng-src="{{imgSrc.src}}" class="fullscreen-image"/>
+	        <br> 
+	      <p>Hazard Occurrence</p>
+	      <br>
+	        <div class="vertical-align">
+		    <div class="btns">
+		      <label>
+		        <input name="button-group" type="radio" ng-value="5" ng-model="imgSrc.value" ng-change="rangeChange(imgSrc)">
+		          <span class="btn first" >Very strong<br>impact</span>
+		        </input>
+		      </label>
+		      <label>
+		        <input name="button-group" type="radio" ng-value="4" ng-model="imgSrc.value" ng-change="rangeChange(imgSrc)">
+		          <span class="btn">Strong<br>impact</span>
+		        </input>
+		      </label>
+		      <label>
+		        <input name="button-group" type="radio" ng-value="3" ng-model="imgSrc.value"  ng-change="rangeChange(imgSrc)">
+		          <span class="btn">Moderate<br>impact</span>
+		        </input>
+		      </label>
+		      <label>
+		        <input name="button-group" type="radio" ng-value="2" ng-model="imgSrc.value" ng-change="rangeChange(imgSrc)">
+		          <span class="btn last">Minor<br>impact</span>
+		        </input>
+		      </label>
+		        </div>
+		  </div>
+	</ion-slide>
+    </ion-slide-box>
+    
+</div>
+	
+

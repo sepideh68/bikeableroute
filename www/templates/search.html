@@ -1,0 +1,32 @@
+<ion-view title="Tracking History">
+  <ion-nav-buttons side="left">
+    <a class="button button-clear icon ion-ios-arrow-back" href="#/app/map"> </a>
+  </ion-nav-buttons>
+<ion-header-bar class="bar-dark">
+      <h1 class="title">Accordion List</h1>
+    </ion-header-bar>
+
+    <ion-content>
+      <ion-list show-delete="false" can-swipe="true">
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable " 
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
+            &nbsp;<ion-option-button class="button-assertive icon ion-trash-a" ng-click= "trash(group.id)"></ion-option-button>
+           <i class="icon ion-android-walk"></i> Track number {{group.name}}
+          </ion-item>
+          <ion-item ng-repeat="item in group.items"
+          class="item-accordion" ng-class="item.class"                   
+                    ng-show="isGroupShown(group)">
+                    
+            {{item.itemVal}}</ion-item>
+             
+
+           
+        </div>
+      </ion-list>
+
+    </ion-content>       
+     
+</ion-view>

@@ -1,0 +1,28 @@
+
+<ion-bottom-sheet-view> 
+<ion-header-bar align-title="left">
+<h1 class="title ion-arrow-graph-up-right"> Tracking Details</h1>
+<button class="button button-icon icon ion-ios-close-empty"
+	ng-click="modal5.hide()"></button>
+</ion-header-bar> <ion-content class="padding">
+<div class="row" width="100%">
+	<div class="col col-100" align="center">TIME<h5>(hh:mm:ss)</h5></div>
+	
+</div>
+<div class="row" width="100%">
+	<div class="col col-100" align="center"><h2>{{countuphour | counterValue}}:{{countupminute| counterValue}}:{{countupseconds| counterValue}}</h2></div>
+	
+</div>
+
+<div class="row" align="center">
+	<div class="col col-50">DISTANCE<h5>(MI)</h5></div>
+	<div class="col col-50">AVG PACE<h5>(mph)</h5></div>
+</div>
+<div class="row" align="center">
+	<div class="col col-50"><h2>{{distancetoshow | number: 1}}</h2></div>
+	<div class="col col-50"><h2>{{speedtoshow | number: 2}}</h2></div>
+</div>
+</div>
+</div>
+</ion-content> </ion-bottom-sheet-view>
+

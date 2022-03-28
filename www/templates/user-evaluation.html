@@ -1,0 +1,59 @@
+<div class="modal image-modal transparent" >
+	<ion-header-bar align-title="center" class="bar-dark" >
+	
+		<h4 class="title"style ="overflow: initial; white-space:initial;font-size:15px;" >Route Evaluation</h4>
+			
+			<div class="buttons">
+			  <button class="button button-small button-clear button-ligth" ng-click="closeModal()">Cancel</button>			   
+			</div>
+			<div class="buttons" >     		
+				<button class="button button-small button-clear button-ligth"   ng-disabled="locationForm.$invalid" 
+				ng-click="sendEvaluation()">Send</button>
+			</div>		
+	</ion-header-bar>
+    <br>
+    <br>
+    <br>
+<h4 style="margin-left:5px"> How would you evaluate your overall route bikeability experience? </h4>
+  <div style="margin: 5px;" >
+  <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example"  ng-model="option.value" value="5" checked/>
+	Very good
+  </label><br>
+  <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example" ng-model="option.value" value="4"/>
+    Good
+  </label><br>
+  <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example" ng-model="option.value" value="3"/>
+    Moderate
+  </label><br>
+   <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example" ng-model="option.value" value="2"/>
+    Bad
+  </label><br>
+     <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example" ng-model="option.value" value="1"/>
+    Very bad
+  </label><br>
+</div><br>
+<!-- 
+<h4 style="margin-left:5px">What activity you have just finished?</h4>
+  <div style="margin: 5px;" >
+  <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example2"  ng-model="" value="" checked/>
+	Biking
+  </label><br>
+  <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example2" ng-model="" value=""/>
+    Running
+  </label><br>
+  <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example2" ng-model="" value=""/>
+    walking
+  </label><br>
+   <label style="font-size:20px;">
+    <input type="radio" class="option-input radio" name="example2" ng-model="" value=""/>
+    Driving
+  </label><br>
+</div> -->

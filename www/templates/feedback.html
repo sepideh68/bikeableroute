@@ -1,0 +1,80 @@
+<ion-view title="Contact us">
+  <ion-nav-buttons side="left">
+    <a class="button button-clear icon ion-ios-arrow-back" href="#/app/map"> </a>
+  </ion-nav-buttons>
+<ion-header-bar class="bar-dark">
+      <h1 class="title">Contact us</h1>
+    </ion-header-bar>
+
+    <ion-content>
+    
+    <html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title> </title>
+
+	<!-- external styles -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+
+	<!-- google fonts -->
+	<link href='//fonts.googleapis.com/css?family=Lato|Lobster' rel='stylesheet' type='text/css'>
+
+	<!-- local styles -->
+	<link rel="stylesheet" href="main.css">
+
+	<!-- jquery -->
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+
+	<!-- Contact form -->
+	<form  id="contact" >
+
+
+		<!-- Logo, title and informative content -->
+		<!-- <div id="logo" class="bouncing">
+			<em class="icon-food"></em>
+		</div> -->
+
+
+		<h3 id="" > Help us to improve </h3>
+		<p id="pre">
+			If you wish to contact us about our app, feel free to use this contact form.
+		</p>
+		<p id="post">
+			Your message was sent ! <br/>
+			We will provide you with an answer as soon as possible.<br/>
+		</p>
+		
+		<!-- Form fields wrapper -->
+		
+		<div id="wrapper" class="clearfix">
+
+			<!-- Name -->
+			<input type="text" id="name" class="has_icon" name="name" placeholder="Name" ng-model="email.name" required>
+			<label class="icon-user" for="name"></label>
+
+			<!-- Email -->
+			<input type="email" id="emailaddress"  class="has_icon" name="email" placeholder="Email Address" ng-model="email.text" required  >
+			<label class="icon-envelope" for="name"></label>
+
+			<!-- Contact -->
+			<textarea name="" id="message" placeholder="Enter your message" ng-model="email.message" required></textarea>
+
+			<!-- Submit -->
+			<button id="submit" type="submit"  ng-click="sendMail()">
+				<i class="icon-chat"></i> Send message
+			</button>
+
+		</div>
+
+
+	</form>
+
+</body>
+</html>
+    
+    </ion-content>
+    </ion-view>

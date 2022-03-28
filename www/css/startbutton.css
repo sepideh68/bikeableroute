@@ -1,0 +1,105 @@
+
+.trans, .trans:focus, .trans:hover {
+	transition: all 150ms ease-in-out;
+}
+ 
+.mg {
+	margin: 70px auto;
+}
+
+ .buttons1 {
+	display: table;
+	width: 133px;
+	height: 50px;
+	border-radius: 30px;
+	position: fixed;
+    top: 15%;
+    right: 50%;
+    text-align: center;
+    line-height: 50px;
+	display: inline-block;
+	padding-right: 2px;
+	color:white;
+	
+
+}
+ 
+#items {
+	display: inline-block;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin: 2 2px 0 10px;
+	width: 22px;
+	height: 50px;
+	color:white;
+	
+}
+
+
+@keyframes pulsate {
+    0%   {box-shadow: 0 0 0 0px rgba(255,0,0,0.3);}
+    40%  {box-shadow: 0 0 0 8px rgba(255,0,0,0.3);}
+    100% {box-shadow: 0 0 0 0px rgba(255,0,0,0.3);}
+}
+
+.active2 {
+	background-color: #f00921;
+	animation-name: pulsate;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+	
+}
+
+.active1 {
+	cursor: pointer;
+	background-color: #27c42f;
+	border:2px solid #30e922;
+
+}
+
+
+
+
+
+
+.trans, .trans:focus, .trans:hover {
+	transition: all 150ms ease-in-out;
+}
+ 
+.mg {
+	margin: 70px auto;
+}
+
+ .buttons2 {
+	display: table;
+	width: 135px;
+	height: 50px;
+	border-radius: 30px;
+	position: fixed;
+    top: 15%;
+    right: 10%;
+    text-align: center;
+    line-height: 50px;
+	display: inline-block;
+	padding-right: 2px;
+	color:white;
+	background-color: #ee4d04;
+	cursor: pointer;
+	font-size:15px;
+	border:2px solid #fd7100;
+		
+
+}
+ 
+#items2 {
+	display: inline-block;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin: 2 2px 0 10px;
+	width: 22px;
+	height: 50px;
+	color:white;
+	
+}
+

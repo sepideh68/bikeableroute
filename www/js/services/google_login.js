@@ -54,8 +54,8 @@ googleLoginService.factory('googleLogin', [
         service.access_token = false;
         //service.redirect_url = 'http://127.0.0.1:81/google_demo/www/';
         service.redirect_url = 'http://localhost';
-        service.client_id = '924675608361-7vrn9f592qgagtffvtc25umdlfmhhnkd.apps.googleusercontent.com';
-        service.secret = '4oOtInXdYCH6GjIVyr7nL6wx';
+        service.client_id = '#clientID';
+        service.secret = '#';
         service.scope = 'https://www.googleapis.com/auth/fitness.activity.write https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/plus.me';
         service.gulp = function (url, name) {
             url = url.substring(url.indexOf('?') + 1, url.length);
